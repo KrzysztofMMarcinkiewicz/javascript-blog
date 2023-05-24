@@ -1,5 +1,5 @@
-v{
-  "name": "task-runner",
+{
+  "name": "javascript-blog",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
