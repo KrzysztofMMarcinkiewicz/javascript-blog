@@ -43,3 +43,25 @@ const links = document.querySelectorAll(".titles a");
 for (let link of links) {
   link.addEventListener("click", titleClickHandler);
 }
+
+function generateTitleLinks() {
+  // usuń zawartość listy linków w lewej kolumnie
+  const titleList = document.querySelector(optTitleListSelector);
+  optTitleListSelector.innerHTML = "";
+
+  function clearMessages() {
+    document.getElementById("messages").innerHTML = "";
+  }
+
+  // odczytaj id artykułu i zapisz je do stałej
+  const articleID = this.getAttribute("href");
+  console.log(articleID);
+
+  // znajdź element z tytułem artykułu i zapisz jego zawartość do stałej
+
+  // na podstawie tych informacji stwórz kod HTML linka i zapisz go do stałej
+
+  // wstaw stworzony kod HTML do listy linków w lewej kolumnie
+
+  console.log();
+}
