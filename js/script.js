@@ -38,30 +38,60 @@ function titleClickHandler(event) {
   targetArticle.classList.add("active");
 }
 
-const links = document.querySelectorAll(".titles a");
+const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles';
 
-for (let link of links) {
-  link.addEventListener("click", titleClickHandler);
+function generateTitleLinks() {
+
+
+  let html = '';
+
+  
+//   // [DONE] remove contents of titleList
+  const titleList = document.querySelector(optTitleListSelector);
+ 
+  function clearTitleList(){
+    document.querySelector(optTitleListSelector).innerHTML = "";
+  }
+
+  // clearTitleList();
+
+  // [DONE]for each article
+  const articles = document.querySelectorAll(optArticleSelector);
+
+  for (let article of articles) {
+    // [DONE] get the article id
+
+  const articleId = article.getAttribute("id");
+  console.log(articleId);
+
+  // // [DONE] find the title element
+  const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+  
+  // //[DONE] create HTML of the link 
+  const linkHTML = '<li><a href="#'+ articleId +'"><span>' + articleTitle + '</span></a></li>';
+console.log(linkHTML);
+
+    /* insert link into html variable */
+html = html + linkHTML;
+
+console.log(html);
+  }
+  
+  titleList.innerHTML = html;
+
+  // //// [DONE]insert link into titleList
+  // titleList.insertAdjacentHTML ('beforebegin', linkHTML);
+
+  const links = document.querySelectorAll(".titles a");
+  console.log(links);
+  
+  for (let link of links) {
+    link.addEventListener("click", titleClickHandler);
+  }
+
 }
 
-// function generateTitleLinks() {
-//   // usuń zawartość listy linków w lewej kolumnie
-//   const titleList = document.querySelector(optTitleListSelector);
-//   optTitleListSelector.innerHTML = "";
+generateTitleLinks();
 
-  // function clearMessages() {
-  //   document.getElementById("messages").innerHTML = "";
-  // }
-
-  // // odczytaj id artykułu i zapisz je do stałej
-  // const articleID = this.getAttribute("href");
-  // console.log(articleID);
-
-  // // znajdź element z tytułem artykułu i zapisz jego zawartość do stałej
-
-  // // na podstawie tych informacji stwórz kod HTML linka i zapisz go do stałej
-
-  // // wstaw stworzony kod HTML do listy linków w lewej kolumnie
-
-//   console.log();
-// }
