@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext');
-
 /* Variables */
 
 $color-light: #fff;
@@ -17,22 +16,21 @@ $font-text: 'Source Sans Pro', sans-serif;
   box-sizing: border-box;
 }
 
-​body {
+body {
   background: $color-light;
   font-family: $font-text;
-  // color: $color-dark;
-  color: red;
+  color: $color-dark;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
 }
 
-​.container {
+.container {
   max-width: 1140px;
   margin: 0 auto;
 }
 
-​ .section-title {
+.section-title {
   font-size: 22px;
   text-transform: uppercase;
   font-family: $font-header;
@@ -45,23 +43,22 @@ $font-text: 'Source Sans Pro', sans-serif;
   }
 }
 
-​
-
 /* Layout */
-​ .wrapper {
+
+.wrapper {
   display: flex;
   margin-left: 10px;
 }
 
-​ .sidebar {
+.sidebar {
   flex: 1 0 0;
 }
 
-​ .posts {
+.posts {
   flex: 2 0 0;
 }
 
-​ .sidebar,
+.sidebar,
 .posts {
   background: $color-light;
   margin-right: 10px;
@@ -70,10 +67,9 @@ $font-text: 'Source Sans Pro', sans-serif;
   border-radius: 5px;
 }
 
-​
-
 /* Logo */
-​ .logo {
+
+.logo {
   font-family: $font-logo;
   font-weight: 400;
   font-size: 104px;
@@ -81,10 +77,9 @@ $font-text: 'Source Sans Pro', sans-serif;
   text-align: center;
 }
 
-​
-
 /* Lists */
-​ .list {
+
+.list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -94,25 +89,23 @@ $font-text: 'Source Sans Pro', sans-serif;
   }
 }
 
-​ .list-horizontal {
+.list-horizontal {
   li {
     display: inline-block;
   }
 }
 
-​
-
 /* Authors */
-​ .authors {
+
+.authors {
   li {
     margin-bottom: 12px;
   }
 }
 
-​
-
 /* Post */
-​ .post {
+
+.post {
   display: none;
 
   &.active {
@@ -120,14 +113,40 @@ $font-text: 'Source Sans Pro', sans-serif;
   }
 }
 
-​ .post-author {
+.post-author {
   font-style: italic;
 }
 
-​ .post-tags {
+.post-tags {
   display: flex;
 
   p {
     margin: 0 10px 0 0;
   }
+}
+
+/* Tags */
+
+.tags li {
+  display: inline;
+}
+
+.tag-size-1 {
+  font-size: 0.8rem;
+}
+
+.tag-size-2 {
+  font-size: 1rem;
+}
+
+.tag-size-3 {
+  font-size: 1.2rem;
+}
+
+.tag-size-4 {
+  font-size: 1.4rem;
+}
+
+.tag-size-5 {
+  font-size: 1.6rem;
 }

@@ -31,8 +31,8 @@ function titleClickHandler(event) {
   console.log(articleSelector);
 
   /* [DONE]find the correct article using the selector (value of 'href' attribute) */
-  const targetArticle = document.querySelector("a");
-  console.log(targetArticle.href);
+  const targetArticle = document.querySelector(articleSelector);
+  console.log(targetArticle);
 
   /* [DONE]add class 'active' to the correct article */
   targetArticle.classList.add("active");
@@ -44,24 +44,24 @@ for (let link of links) {
   link.addEventListener("click", titleClickHandler);
 }
 
-function generateTitleLinks() {
-  // usuń zawartość listy linków w lewej kolumnie
-  const titleList = document.querySelector(optTitleListSelector);
-  optTitleListSelector.innerHTML = "";
+// function generateTitleLinks() {
+//   // usuń zawartość listy linków w lewej kolumnie
+//   const titleList = document.querySelector(optTitleListSelector);
+//   optTitleListSelector.innerHTML = "";
 
-  function clearMessages() {
-    document.getElementById("messages").innerHTML = "";
-  }
+  // function clearMessages() {
+  //   document.getElementById("messages").innerHTML = "";
+  // }
 
-  // odczytaj id artykułu i zapisz je do stałej
-  const articleID = this.getAttribute("href");
-  console.log(articleID);
+  // // odczytaj id artykułu i zapisz je do stałej
+  // const articleID = this.getAttribute("href");
+  // console.log(articleID);
 
-  // znajdź element z tytułem artykułu i zapisz jego zawartość do stałej
+  // // znajdź element z tytułem artykułu i zapisz jego zawartość do stałej
 
-  // na podstawie tych informacji stwórz kod HTML linka i zapisz go do stałej
+  // // na podstawie tych informacji stwórz kod HTML linka i zapisz go do stałej
 
-  // wstaw stworzony kod HTML do listy linków w lewej kolumnie
+  // // wstaw stworzony kod HTML do listy linków w lewej kolumnie
 
-  console.log();
-}
+//   console.log();
+// }
