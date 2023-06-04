@@ -1,5 +1,13 @@
 "use strict";
 
+const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles',
+  optArticleTagsSelector = '.post-tags .list',
+  optArticleAuthors = '.authors .author-name',
+  optAuthorsSelector = '.posts .post-author',
+  optArticleAuthorSelector = "data-author";
+
 function titleClickHandler(event) {
   event.preventDefault();
   const clickedElement = this;
@@ -38,14 +46,6 @@ function titleClickHandler(event) {
   targetArticle.classList.add("active");
 }
 
-const optArticleSelector = '.post',
-  optTitleSelector = '.post-title',
-  optTitleListSelector = '.titles',
-  optArticleTagsSelector = '.post-tags .list',
-  optArticleAuthors = '.authors .author-name',
-  optAuthorsSelector = '.posts .post-author',
-  optArticleAuthorSelector = "data-author";
-
 function generateTitleLinks(customSelector = '') {
 
   let html = '';
@@ -73,7 +73,7 @@ function generateTitleLinks(customSelector = '') {
   const articleTitle = article.querySelector(optTitleSelector).innerHTML;
 
   // //[DONE] create HTML of the link
-  const linkHTML = '<li><a href="#tag-'+ articleId +'"><span>' + articleTitle + '</span></a></li>';
+  const linkHTML = '<li><a href="#'+ articleId +'"><span>' + articleTitle + '</span></a></li>';
 console.log(linkHTML);
 
   /* insert link into html variable */
@@ -105,7 +105,7 @@ function generateTags(){
   /*[DONE] START LOOP: for every article: */
   for (let article of articles) {
     /* [DONE]find tags wrapper */
-    const titleList = article.querySelector(optArticleTagsSelector);
+    const tagWrapper = article.querySelector(optArticleTagsSelector);
 
     /* [DONE]make html variable with empty string */
     let html = '';
@@ -137,7 +137,7 @@ function generateTags(){
 
     /* [DONE]insert HTML of all the links into the tags wrapper */
 
-    titleList.innerHTML = html;
+    tagWrapper.innerHTML = html;
   }
 
     /* [DONE]END LOOP: for every article: */
